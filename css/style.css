@@ -1,0 +1,116 @@
+/*
+**
+**  Project: Sightmap
+**  Author: Justin Henderson
+**
+**  Contents
+**  1. Basic Elements
+**  2. Specifics
+**  3. Media Queries
+**
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*
+**  Basic Elements
+*/
+
+html {
+  font-size:62.5%;
+}
+
+body {
+  font-family:'Lato', sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size:3rem;
+}
+
+h3 {
+  font-size:2.2rem;
+  margin:0 0 .5em;
+}
+
+p {
+  font-size:1.6rem;
+}
+
+img {
+  width:100%;
+  height:auto;
+}
+
+/*
+**  Specifics
+*/
+
+.container {
+  display:flex;
+  width:100%;
+  max-width:1200px;
+  margin:2em auto;
+  padding:0 1em;
+}
+
+.col {
+  flex:1 1 48%;
+  margin:1%;
+}
+
+.unavailable .unit {
+  opacity:.5;
+}
+
+.unit {
+  display:flex;
+  margin:1em 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.unit .image {
+  flex:0 1 40%;
+}
+
+.unit .meta {
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  padding:1em;
+}
+
+.unit .updated {
+  align-self:flex-end;
+  font-size:1.4rem;
+  color:#666;
+  margin:0;
+}
+
+/*
+**  Media Queries
+*/
+
+@media(max-width:979px) {
+  .unit .updated {
+    font-size:1.2rem;
+  }
+}
+
+
+@media(max-width:767px) {
+  .container {
+    flex-direction:column;
+  }
+
+  .col {
+    flex-basis:100%;
+  }
+}
